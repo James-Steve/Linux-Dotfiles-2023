@@ -1,0 +1,22 @@
+[user]
+    name = James
+    email = stevensonrobertjames@gmail.com
+[alias]
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !"git lg1"
+    st = status
+    ls-ignored = ls-files .  --ignored --exclude-standard --others
+    ls-untracked = ls-files .  --exclude-standard --others
+    ls-tracked = ls-tree --full-tree --name-only -r HEAD
+    untrack-ignored-files = !git rm -r --cached . && git add -A && git commit -am "Remove ignored files" 
+    ch=checkout
+
+
+#helpfull commands
+#git checkout --track origin/branchname     will start tracking an already existing remote branch
+#git ls-files . --ignored --exclude-standard --others    will list ignored files
+#git ls-files . --exclude-standard --others             will list untracked files
+[core]
+	edtior = nvim
+	editor = nvim
