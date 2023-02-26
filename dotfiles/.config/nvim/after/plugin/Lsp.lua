@@ -101,10 +101,14 @@ cmp_mappings['<S-Tab>'] = nil
 local cmp_sources = {
     --    { name = 'cmdline', keyword_length = 5},
     { name = 'luasnip' }, -- For luasnip users.
-    { name = 'nvim_lsp' },
+    { name = 'nvim_lsp',
+    entry_filter = function(entry)
+                return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+            end },
     { name = 'path' },
     { name = 'nvim_lua' },
     { name = 'buffer',  keyword_length = 3 },
+    --{ name = 'l
 
 }
 
