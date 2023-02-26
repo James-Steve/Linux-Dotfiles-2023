@@ -39,15 +39,52 @@ require("mason-lspconfig").setup {
 --CMP
 --=========================================================
 local cmp = require('cmp')
+--[[
+cmp.setup({
+    snippet = {
+        -- REQUIRED - you must specify a snippet engine
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+            -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+            -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        end,
+    },
+    sources = cmp.config.sources({
+    --    { name = 'cmdline', keyword_length = 5},
+        { name = 'nvim_lua'},
+        { name = 'nvim_lsp'},
+        { name = 'vsnip'}, -- For vsnip users.
+        -- { name = 'luasnip' }, -- For luasnip users.
+        -- { name = 'ultisnips' }, -- For ultisnips users.
+        -- { name = 'snippy' }, -- For snippy users.
+
+     --   { name = 'path', keyword_length = 1},
+        { name = 'buffer', keyword_length = 5 },
+    })
+
+})
+--]]
 
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
-
+local cmp_snippet = {
+        -- REQUIRED - you must specify a snippet engine
+        expand = function(args)
+           -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+             require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+            -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+        end,
+    }
 
 local cmp_mappings = lsp.defaults.cmp_mappings({
 	['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
 	['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-	["<C-Space>"] = cmp.mapping.complete(),
+	["<C-Space>"] = cmp.mapping.complete({
+        config={
+            sources={
+                {name = 'vsnip'}}}}),
 	['<c-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
 	['<c-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
 	["<c-y>"] = cmp.mapping(
@@ -64,7 +101,8 @@ cmp_mappings['<S-Tab>'] = nil
 
 
 lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
+  mapping = cmp_mappings,
+  snippet = cmp_snippet,
 })
 
 
@@ -78,6 +116,7 @@ lsp.set_preferences({
         info = 'I'
     }
 })
+
 
 --===========================================================
 --Mappings
