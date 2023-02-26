@@ -1,6 +1,5 @@
 local lsp = require("lsp-zero")
 local lua_snip = require("luasnip")
-
 lsp.preset("recommended")
 
 --[[
@@ -88,7 +87,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
     ['<c-b>'] = cmp.mapping(cmp.mapping.scroll_docs( -4), { 'i', 'c' }),
     ['<c-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     ["<c-y>"] = cmp.mapping(
-            cmp.mapping.confirm {
+        cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Insert,
             select = true,
         },
@@ -101,11 +100,11 @@ cmp_mappings['<S-Tab>'] = nil
 
 local cmp_sources = {
     --    { name = 'cmdline', keyword_length = 5},
+    { name = 'luasnip' }, -- For luasnip users.
     { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'nvim_lua' },
     { name = 'buffer',  keyword_length = 3 },
-    { name = 'luasnip' }, -- For luasnip users.
 
 }
 
@@ -126,14 +125,12 @@ lsp.set_preferences({
         info = 'I'
     }
 })
-
-
 --===========================================================
 --Mappings
 --==========================================================
-
 lsp.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
+
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.defintion() end, opts)
     vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
@@ -166,3 +163,32 @@ vim.keymap.set("i", "<C-l>", function() lua_snip.jump(1) end)
 vim.keymap.set("i", "<C-h>", function() lua_snip.jump( -1) end)
 vim.keymap.set("s", "<C-l>", function() lua_snip.jump(1) end)
 vim.keymap.set("s", "<C-h>", function() lua_snip.jump( -1) end)
+
+
+
+--[[
+require("mason-lspconfig").setup_handlers {
+    -- The first entry (without a key) will be the default handler
+    -- and will be called for each installed server that doesn't have
+    -- a dedicated handler.
+    function(server_name) -- default handler (optional)
+        require("lspconfig")[server_name].setup {
+            capabilities = {
+                textDocument = {
+                    completion = {
+                        completionItem = {
+                            snippetSupport = false
+                        }
+                    }
+                }
+            },
+
+        }
+    end,
+    -- Next, you can provide a dedicated handler for specific servers.
+    -- For example, a handler override for the `rust_analyzer`:
+    --[[["rust_analyzer"] = function()
+        require("rust-tools").setup {}
+    end
+    --]]
+--]]
