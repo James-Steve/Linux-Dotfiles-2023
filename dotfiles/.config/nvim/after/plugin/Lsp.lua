@@ -97,7 +97,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 })
 
 cmp_mappings['<Tab>'] = nil
-cmcmp_mappings['<S-Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
 
 local cmp_sources = {
     --    { name = 'cmdline', keyword_length = 5},
