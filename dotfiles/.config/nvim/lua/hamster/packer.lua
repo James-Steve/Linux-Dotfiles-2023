@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
             -- Snippets
             {'L3MON4D3/LuaSnip'},             -- Required
             {'rafamadriz/friendly-snippets'}, -- Optional
+            --{'luasnip-expand-or-jump'},
 
 --[[
             {'hrsh7th/vim-vsnip'},
@@ -100,16 +101,6 @@ return require('packer').startup(function(use)
     --todo lists:
     use('vimwiki/vimwiki')
     --[[
-    --snippet manager
-    use('hrsh7th/vim-vsnip')
-    use('hrsh7th/vim-vsnip-integ')
-    --actual snippet
-    use('rafamadriz/friendly-snippets')
-    use('J0rgeSerran0/vscode-csharp-snippets')
-
-
-
-
     --snippet manager
     {'hrsh7th/vim-vsnip'},
     {'hrsh7th/vim-vsnip-integ'},
