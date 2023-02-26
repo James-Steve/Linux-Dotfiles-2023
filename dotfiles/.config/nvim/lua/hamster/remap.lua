@@ -6,8 +6,8 @@ vim.g.mapleader = "\\"
 vim.keymap.set("n", "<space>f", vim.cmd.Ex)
 
 --Code tab stops cleanup
-vim.keymap.set("n", "<F7>",  "gg=G")
-vim.keymap.set("n", "<C-7>",  "gg=G")
+--vim.keymap.set("n", "<F7>",  "gg=G")
+--vim.keymap.set("n", "<C-7>",  "gg=G")
 
 
 --moving lines in visual mode
