@@ -97,6 +97,8 @@ alias l='ls -CF'
 alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
 alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
 alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
+alias cfd='cd "/run/media/JimBob/James Drive/"'
+alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
 
 alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
 alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
@@ -104,6 +106,8 @@ alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias telij="bash /opt/idea-IU-222.4345.14/bin/idea.sh"
+alias intelij="bash /opt/idea-IU-222.4345.14/bin/idea.sh"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -130,3 +134,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "$HOME/.cargo/env"
+#export JAVA_HOME=/opt/jdks/jdk-19.0.1
+#export PATH=$PATH:$JAVA_HOME/bin
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
