@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
 --]]
         }
     }
+    use('mfussenegger/nvim-jdtls')
     --====================================================================
     --NEED to integrate these
     --==================================================================
