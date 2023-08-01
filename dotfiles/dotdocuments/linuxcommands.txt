@@ -1,0 +1,18 @@
+find * -prune -type f -exec \sh -c 'pdftoppm -png "$0" "${0%.*}" && mv *.png ../../Images/"${0%.*}"' {} \;
+for each pdf file in a folder do the following
+    convert the pdf to an image and call it it's orignal name minus the ".pdf"
+    move the images from the pdf file to a folder named after the pdf file
+    
+
+find * -type f -name "*.pptx" | while read line; do echo $line; done
+
+
+ find * -type f -name "*.pptx" | while read line; do libreoffice --convert-to pdf --outdir "$temp" "$line"; done
+ for each pptx file in a folder or subfolder do the following
+     convert the pptx to an pdf and output it to the value of variable temp
+
+
+
+stow: 
+stow -nvS .config/ -t ~/.config
+will create siymbolic links from all files in .config to ~/.config
