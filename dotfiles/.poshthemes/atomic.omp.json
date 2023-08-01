@@ -43,10 +43,10 @@
           "foreground": "#011627",
           "powerline_symbol": "\ue0b0",
           "properties": {
+              "native_fallback" : false,
             "branch_icon": "\ue725 ",
             "fetch_status": true,
-            "fetch_upstream_icon": true,
-              "native_fallback" : true
+            "fetch_upstream_icon": true
           },
           "style": "powerline",
 

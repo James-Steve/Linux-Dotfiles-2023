@@ -33,7 +33,7 @@ require("mason").setup({
     }
 })
 require("mason-lspconfig").setup {
-    ensure_installed = { "rust_analyzer", "lua_ls" },
+    ensure_installed = { "rust_analyzer", "lua_ls", "texlab"},
 }
 --=========================================================
 --CMP
@@ -102,6 +102,11 @@ local cmp_sources = {
     --    { name = 'cmdline', keyword_length = 5},
     { name = 'luasnip' }, -- For luasnip users.
     { name = 'nvim_lsp',
+    --============================================================================
+    --NB gets rid of lsp snippets
+    --I.e the snippets that complete/expand but with the snippet trigger still there 
+    --for example sout => soutSystem.Rest.of.snippet
+    --============================================================================
     entry_filter = function(entry)
                 return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
             end },
@@ -167,32 +172,3 @@ vim.keymap.set("i", "<C-l>", function() lua_snip.jump(1) end)
 vim.keymap.set("i", "<C-h>", function() lua_snip.jump( -1) end)
 vim.keymap.set("s", "<C-l>", function() lua_snip.jump(1) end)
 vim.keymap.set("s", "<C-h>", function() lua_snip.jump( -1) end)
-
-
-
---[[
-require("mason-lspconfig").setup_handlers {
-    -- The first entry (without a key) will be the default handler
-    -- and will be called for each installed server that doesn't have
-    -- a dedicated handler.
-    function(server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup {
-            capabilities = {
-                textDocument = {
-                    completion = {
-                        completionItem = {
-                            snippetSupport = false
-                        }
-                    }
-                }
-            },
-
-        }
-    end,
-    -- Next, you can provide a dedicated handler for specific servers.
-    -- For example, a handler override for the `rust_analyzer`:
-    --[[["rust_analyzer"] = function()
-        require("rust-tools").setup {}
-    end
-    --]]
---]]
