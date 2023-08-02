@@ -97,8 +97,14 @@ alias l='ls -CF'
 alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
 alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
 alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
-alias cfd='cd "/run/media/JimBob/James Drive/"'
-alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
+
+#alias cfd='cd "/run/media/JimBob/James Drive/"'
+#alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
+#Fedora laptop
+alias cfd='cd "~/Documents/UniOneDrive/"'
+alias cfp='cd "~/Documents/UniOneDrive/Physics/"'
+alias cfdw='cd "~/Documents/UniOneDrive/Programming/WRPV302/"'
+alias cfdl='cd "~/Documents/UniOneDrive/Programming/WRLV302/"'
 
 alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
 alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
