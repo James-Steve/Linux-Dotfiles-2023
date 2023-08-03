@@ -1,0 +1,24 @@
+All
+    key     view keymaps
+Git
+    lg1                 graph all branches neatly
+    lg2                 interactive graph all branches neatly
+    lg
+    ls-ignored
+    ls-untracked
+    st                  status
+    ch                  checkout
+untrack-ignored-files   
+
+Desktop Aliases
+    cwork   cd into Third Year folder
+    work    open file explorer in third-year folder
+    cworkp  cd into programming folder in third-year folder
+
+
+Fedora Laptop
+    cfu     cd into UNI folder
+    cfp     cd into FVV302a folder
+    cfw     cd into WRPV302 folder
+    cfl     cd into WRLV302 folder
+    cfd     cd into Linux-Dotfiles-2023 folder

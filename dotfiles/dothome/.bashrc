@@ -1,4 +1,5 @@
 PROMPT_DIRTRIM=3;
+export UNI="$HOME/Documents/UniOneDrive/"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -68,14 +69,15 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#    "
     ;;
 *)
     ;;
 esac
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#    "
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
@@ -101,13 +103,20 @@ alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Th
 #alias cfd='cd "/run/media/JimBob/James Drive/"'
 #alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
 #Fedora laptop
-alias cfd='cd "~/Documents/UniOneDrive/"'
-alias cfp='cd "~/Documents/UniOneDrive/Physics/"'
-alias cfdw='cd "~/Documents/UniOneDrive/Programming/WRPV302/"'
-alias cfdl='cd "~/Documents/UniOneDrive/Programming/WRLV302/"'
+alias cfu='cd "$UNI"'
+alias cfp='cd "$UNI/Physics/FVV302a Crystallography and X-ray diffraction/"'
+alias cfw='cd "$UNI/Programming/WRPV302/"'
+alias cfl='cd "$UNI/Programming/WRLV302/"'
+alias cfd='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
 
 alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
 alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
+
+
+alias keys='cat "$HOME/aliases.txt"'
+
+
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
