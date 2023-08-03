@@ -1,3 +1,10 @@
 syncthing
 angry ip scanner
 okular
+spotify
+nvm
+node
+npm
+go
+java
+.dotnet
