@@ -1,5 +1,6 @@
 PROMPT_DIRTRIM=3;
 export UNI="$HOME/Documents/UniOneDrive/"
+export SUCK="$HOME/.local/share/suckless/"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -111,6 +112,7 @@ alias cfd='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
 
 alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
 alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
+alias cfs='cd "$HOME/.local/share/suckless/"'
 
 
 alias keys='cat "$HOME/aliases.txt"'

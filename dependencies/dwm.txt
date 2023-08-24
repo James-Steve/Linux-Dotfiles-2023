@@ -1,0 +1,9 @@
+instructions on how to install dwm on fedora
+https://gitlab.com/-/snippets/2048501
+libstdc++-12-dev
+    https://installati.one/fedora/34/libstdc++/?expand_article=1
+export cpath variable
+export CAPTH=$CPATH:/usr/include/c++/13/
+
+
+sudo dnf install xev
