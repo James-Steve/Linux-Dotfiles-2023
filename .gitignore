@@ -1,4 +1,7 @@
 **/packer_compiled.lua
-**/libreoffice/**
-*packer_com*
+**/**/packer_*
+*packer_*
 
+
+**/libre*
+>>>>>>> master

@@ -1,0 +1,2 @@
+Neovim
+disable snippets from lsp server https://neovim.discourse.group/t/how-to-disable-lsp-snippets/922

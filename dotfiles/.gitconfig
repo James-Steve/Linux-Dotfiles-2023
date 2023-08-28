@@ -19,7 +19,6 @@
 #git ls-files . --exclude-standard --others             will list untracked files
 [core]
 	edtior = nvim
-	editor = nvim
 [safe]
 	directory = /mnt/c/Users/hamst/OneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/Assignments/
 	directory = /mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/Assignments
