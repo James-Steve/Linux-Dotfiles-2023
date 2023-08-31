@@ -1,0 +1,12 @@
+[0] Config.pm:307> INFO - This is Biber 2.19 running in TOOL mode
+[0] Config.pm:310> INFO - Logfile is 'physics.bib.blg'
+[42] biber:340> INFO - === Tue Aug 29, 2023, 02:22:09
+[57] Biber.pm:4606> INFO - Looking for bibtex file 'physics.bib'
+[58] bibtex.pm:1713> INFO - LaTeX decoding ...
+[60] bibtex.pm:1519> INFO - Found BibTeX data source 'physics.bib'
+[84] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[84] UCollate.pm:68> INFO - Overriding locale 'en_US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[84] Biber.pm:4239> INFO - Sorting list 'tool/global//global/global' of type 'entry' with template 'tool' and locale 'en_US'
+[84] Biber.pm:4245> INFO - No sort tailoring available for locale 'en_US'
+[85] bibtex.pm:440> INFO - Writing 'physics_bibertool.bib' with encoding 'UTF-8'
+[85] bibtex.pm:480> INFO - Output to physics_bibertool.bib

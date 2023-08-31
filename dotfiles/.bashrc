@@ -136,6 +136,7 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.cargo/env"
 #export JAVA_HOME=/opt/jdks/jdk-19.0.1
 #export PATH=$PATH:$JAVA_HOME/bin
+export BIB="$HOME/.config/LatexStuff/bibtex/bib/physics.bib"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
