@@ -8,3 +8,6 @@ npm
 go
 java
 .dotnet
+
+
+https://www.linuxcapable.com/install-tor-browser-on-fedora-linux/ how to register an app
