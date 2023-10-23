@@ -8,3 +8,8 @@ npm
 go
 java
 .dotnet
+
+
+
+cool tools
+pdftk manipulating pdf files (extracting range)
