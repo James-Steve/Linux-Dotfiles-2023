@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage[backend=biber]{biblatex}
+\usepackage{caption}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{multirow}
+
+%\addbibresource{~/.config/LatexStuff/bibtex/bib/physics.bib}
+\addbibresource{sample.bib}
+\graphicspath{{./images/}}
+\setlength{\parindent}{0pt}
+
+
+\newcommand{\mycomment}[1]{}
+
+
+
+
+
+
+
+\mycomment{
+	label for EQS \label{}
+	citing reference \cite{}
+	equation
+
+	\begin{equation}
+		\label{eqn:somelabel}
+		e=mc^2
+	\end{equation}
+}
+
+\autoref{eqn:somelabel}
+
+
+
+Math inline $Math her$
+Math equation without eq numbering \[ math inside here \] 

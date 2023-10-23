@@ -1,0 +1,288 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[backend=biber]{biblatex}
+\usepackage{caption}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{multirow}
+
+%\addbibresource{~/.config/LatexStuff/bibtex/bib/physics.bib}
+\addbibresource{sample.bib}
+\graphicspath{{./images/}}
+\setlength{\parindent}{0pt}
+
+\title{Frank Hertz Experiment}
+\author{Robert James Stevenson}
+\date{24 August 2023}
+
+\newcommand{\mycomment}[1]{}
+
+\begin{document}
+\mycomment{
+	label for EQS \label{}
+	citing reference \cite{}
+	equation
+
+	\begin{equation}
+		\label{eqn:somelabel}
+		e=mc^2
+	\end{equation}
+}
+
+
+\maketitle
+
+\section{Abstract}
+In this experiment, we investigate the Franck-Hertz setup and its essential findings.
+Through the careful control of accelerating voltages and using the resulting current drops,
+we aim to confirm the existence of discrete energy levels within mercury atoms. Our analysis yields a close agreement between experimental and theoretical values,
+demonstrating the consistency of our results with established scientific principles.
+The Franck-Hertz experiment continues to stand as a cornerstone in our understanding of quantum phenomena and atomic structure.
+
+\section{Introduction}
+The Franck-Hertz experiment, named after physicists James Franck and Gustav Hertz,
+completely changed our understanding of atomic and subatomic behavior in the early 20th century.
+By bombarding gaseous atoms with electrons and observing their response,
+it provided crucial evidence for the quantization of energy levels within atoms.
+This landmark experiment affirmed the wave-particle duality of electrons and played an important in shaping the foundations of quantum mechanics.
+In this experiment, we'll delve into the experiment's setup and key findings. \cite{brief}
+
+\section{Theory}
+
+\begin{figure}[H]
+	\includegraphics[width=10cm]{sketch}
+	\centering
+	\caption{Schematic of Experiment}
+	\label{fig:sketch}
+\end{figure}
+
+\par
+In this Experiment a vacuum tube, containing Mercury is heated to a temperature
+such it is turned to vapor. The vacuum tube also contains a filament/cathode (labeled as K),
+a positively
+charged mesh grid (G1), negatively charged grid (G2) and an Anode (labeled as A)
+acting  as  a collecting plate, see
+\textbf{\autoref{fig:sketch}}
+for circuit diagram.
+Electrons are emitted from the filament and accelerated, due to the positively
+charged grid (G1), through the mercury vapor, some will overcome the repulsive force due to G2,
+collect on the collecting plate, which is confirmed by the ammeter.
+As a result the accelerated electrons will preform elastic collisions with the
+electrons belonging to the Mercury atoms.
+\\
+The Ampere reading is proportional to the potential across the controlled grid (G1).
+\\
+\\
+The Kinetic Energy (KE) of the electrons is directly proportional to the potential
+difference across G1, potential across G1 will hence be referred to as VG1.
+When the electrons have a higher enough KE, high enough VG1, they will
+then preform inelastic collisions with Mercury's electrons. The emitted electrons that
+collided with the mercury atoms
+will have a lower kinetic energy and less of them will be able to overcome
+the repulsive force of G2, this will be indicated by a sharp drop in the ampere reading.
+\\
+Inelastic collisions occur as the emitted electrons now have enough energy to
+excite the Mercury electrons to the next energy level. The potential of VG1 at which this phenomenon occurs will
+be referred to as VBr, which is 4.9 Volts.\cite{lecture}  \cite{fth}
+\\
+\\
+This drop in ampere reading will now occur at every scalar multiple of VBr:
+$ V_{Br1} = 2V_{Br} - V_{Br} = \Delta V \\
+V_{Br2} = 3V_{Br} - 2V_{Br} = \Delta V \\
+V_{Br3} = 5V_{Br} - 4V_{Br} = \Delta V \\
+\vdots \\
+V_{BR} = (n+1)V_{BR} - (n)V_{Br} = \Delta V \\
+$
+\\
+This shows that mercury has distinct energy levels and will absorb energy in quantized
+amounts:
+\begin{equation}
+   E = e\Delta V = hf = \frac{hc}{\lambda}
+    \label{eq:temp}
+\end{equation}
+$E=$ Energy (Joules [J] or Electron Volts [eV])\\
+$e=$ charge of electron (Coulombs [C]) \\
+$h=$ Planck's constant \\
+$f=$ Frequency of emitted radiation (hertz [hz]) \\
+$\lambda=$ Wavelength of emitted radiation(meters [m]) \\
+$c=$ Speed of light in a vacuum (meters per second [m/s])\\
+$\Delta V$ = Difference in potential (Volts [V])\\
+
+Note:
+\begin{equation}
+    1eV \approx 1.602176208 \cdot 10^{-19}J
+\end{equation}
+
+\section{Procedure}
+
+
+
+The Follwing equipment was used for the experiment:
+\subsection{Apparatus}
+\begin{itemize}
+    \item Oven (which contains the mercury tube)
+    \item thermal-control unit
+    \item Control Unit (controls the oven heating element, accelerating voltage, 
+        decelerating voltage and cathode)
+    \item Oscilloscope
+    \item connection leads
+\end{itemize}
+
+\subsection{Method}
+\begin{enumerate}
+    \item Make sure all the dials on the control unit are at their lowest setting.
+
+    \item Connect the thermal control unit to the oven by inserting the thermometer into the oven
+
+    \item Connect the oven to the control unit, the oscilloscope to the control unit, and set the
+        relevant settings on the control unit as seen in
+        \textbf{\autoref{fig:oven}}, \textbf{\autoref{fig:control}} and \textbf{\autoref{fig:osc}}
+
+    \item Set the thermal control unit to 175$^{\circ}$C, then turn on the oven,
+        however make sure the temperature does not exceed 200$^{\circ}$C.
+
+    \item Once the temperature is stable at 175$^{\circ}$C, Turn on the control unit and oscilloscope.
+
+    \item On the control unit set the heater dial to its maximum, wait 90 seconds.
+        Set the Amplitude and Reverse bias dials to the indicated value.
+
+    \item Set the Manual/Ramp switch to ``Ramp'' and turn the acceleration dial slowly, however don't
+        set further than the value indicated on the control unit. An Image should appear on the oscilloscope.
+
+    \item Measure the voltage and corresponding ampere for each ``peak'' displayed by the oscilloscope,
+        see \textbf{\autoref{fig:ep}} for the expected result. 
+        Then take the difference in voltage of each measurement with the successive measurement.
+        This will be your VBr.
+\end{enumerate}
+
+
+
+\begin{figure}[H]
+
+	\includegraphics[width=5cm]{oven}
+	\centering
+	\caption{Oven Used in experiment}
+	\label{fig:oven}
+	\includegraphics[width=7cm]{ControlUnit}
+	\centering
+	\caption{Control Unit}
+	\label{fig:control}
+	\includegraphics[width=7cm]{Osc}
+	\centering
+	\caption{Oscilloscope}
+	\label{fig:osc}
+\end{figure}
+\\
+\begin{figure}
+    \includegraphics[width=5cm]{ep}
+    \centering
+    \caption{Theoretical Voltage Ampere Graph}
+    \label{fig:ep}
+\end{figure}
+
+
+
+\mycomment{
+\begin{figure}
+    \centering
+    \subfigure(a){\includegraphics[width=3cm]{oven}}
+	\subfigure(b){\includegraphics[width=3cm]{ControlUnit}}
+    \subfigure(c){\includegraphics[width=3cm]{Osc}}
+    \caption{(a) blah (b) blah (c) blah (d) blah}
+    \label{fig:foobar}
+\end{figure}
+}
+
+\section{Results and Discussion}
+Referring to \textbf{\autoref{fig:osc2}}, The x-axis is Voltage (0.5 volts per division)
+and the y-axis is Current, the unit of current is not important as the dips current determines which Voltage value to measure.
+Ignoring the bottom graph (which is noise), the top graph's shape and trend is similar to theoretical graph,
+\textbf{\autoref{fig:ep}}
+\\
+\\
+Referring \textbf{\autoref{tab:table}}, which is the result of tabulating the experimental and theoretical voltage ampere graphs,
+The Experimental values did not stay constant throughout each peak to peak difference and the average of these values did not match or come close (more than 10 \%) to the theoretical value.
+This inconsistency across the data is attributed to the oven having a binary heating element (controlled by a relay instead of a thyristor to vary the sine wave of the current)
+, fully on or fully off (no in between),
+and the oven having a high temperature threshold activation, the oven had no way of varying the current
+flowing through the heating element to keep the temperature constant.
+\\
+Instead, the oven temperature would drop below the specified temperature until it reached
+the threshold temperature which would activate the relay and let current pass through the heating element until the upper threshold was reached. This would
+have an effect on the mercury vapor.
+\\
+\\
+\\ The Error of the experimental value can be calculated:
+\begin{equation}
+    \label{eq:error}
+    \begin{split}
+        \%error = & \frac{|theoretical - \overline{experimental}|}{theoretical} * 100\% \\
+        \%error = & \frac{|4.9ev - 4.53ev|}{4.9ev} * 100\% = 7.55\%
+    \end{split}
+\end{equation}
+Factors that attributed to this low error of 7.55\% are oxidation on the terminals inside the equipment (experiment took place near the coast), un-calibrated or wrongly calibrated equipment,
+and human error.
+\\
+\\
+The wavelength of excited electrons can be calculated:
+\begin{equation}
+    \label{eq:wave}
+    \begin{split}
+        \lambda = & \frac{hc}{E[joules]} = \frac{hc}{e \overline{\Delta V}} \\
+        = & \frac{hc}{e\cdot 4.533} \approx 2.735 \cdot 10^{-7}m = 273.51 nm
+    \end{split}
+\end{equation}
+\\
+Thus, the experimental wavelength was calculated to be 273.51 nm $\pm$ 7.55\%
+and the theoretical value
+253.7 nm falls into this error bound.
+\\
+\\
+If the excitation energy and wavelength were given \textbf{\autoref{eq:wave}} could be restructed to 
+calculate planks constant.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=8cm\textwidth]{osc2}
+    \end{center}
+    \caption{Experimental Voltage Ampere Graph obtained from oscilloscope}
+    \label{fig:osc2}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \multirow{2}{*}{Peak} & \multicolumn{2}{c|}{Difference of Accelerating Voltage between each Successive Peak [ev]} \\\cline{2-3} 
+        & Experimental & Theoretical \\ \hline
+        1 to 2 & 4 & 4.9 \\ \hline
+        2 to 3 & 4.5 & 4.9 \\ \hline
+        3 to 4 & 5.1 & 4.9 \\ \hline
+        Average & 4.533333333 & 4.9 \\ \hline
+        Standard Deviation & 0.550757055 & 0 \\ \hline
+    \end{tabular}
+    \caption{The tabulation of Theoretical (\autoref{fig:ep}) and Experimental (\autoref{fig:osc2}) values of the peak to peak voltage difference}
+    \label{tab:table}
+
+\end{table}
+
+\section{Conclusion}
+By accelerating electrons through mercury vapor and measuring the resulting voltage differences, 
+this experiment sought to confirm the existence of discrete energy levels within the mercury atoms and calculate the corresponding wavelengths of emitted radiation.
+\\
+The measured average voltage difference between successive peaks, corresponding to the excitation energy, was found to be approximately 4.53 eV.
+This value was notably close to the theoretical value of 4.9 eV, with an error of approximately 7.55\%
+\\
+Furthermore, the calculated wavelength of the emitted radiation was approximately 273.51 nm, with an error within 
+the same range as the excitation energy. Importantly, the theoretical wavelength of 253.7 nm fell within this error margin, 
+reinforcing the consistency of the results with established scientific principles.
+\\
+
+\section{References}
+\printbibliography
+
+
+\end{document}
