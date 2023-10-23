@@ -98,8 +98,10 @@ alias l='ls -CF'
 #custom aliases
 #C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023
 alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
+alias cworkf='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Physics/"'
 alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
 alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
+alias cper='cd "/mnt/c/Users/hamst/OneDrive/"'
 
 #alias cfd='cd "/run/media/JimBob/James Drive/"'
 #alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
