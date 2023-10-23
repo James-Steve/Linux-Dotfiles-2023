@@ -11,5 +11,9 @@ java
 
 
 
-cool tools
+cool tools:
 pdftk manipulating pdf files (extracting range)
+
+
+info:
+https://www.linuxcapable.com/install-tor-browser-on-fedora-linux/ how to register an app (give it a desktop item)
