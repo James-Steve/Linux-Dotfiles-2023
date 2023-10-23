@@ -107,7 +107,8 @@ alias cper='cd "/mnt/c/Users/hamst/OneDrive/"'
 #alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
 #Fedora laptop
 alias cfu='cd "$UNI"'
-alias cfp='cd "$UNI/Physics/FVV302a Crystallography and X-ray diffraction/"'
+alias cfp='cd "$UNI/Physics/FVV302b Solid State/"'
+alias cfpp='cd "$UNI/Physics/Practicals/Sem2/"'
 alias cfw='cd "$UNI/Programming/WRPV302/"'
 alias cfl='cd "$UNI/Programming/WRLV302/"'
 alias cfd='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
@@ -160,3 +161,9 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux/:$PATH"
+
+PATH="/home/jim/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/jim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/jim/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
