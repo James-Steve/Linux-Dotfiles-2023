@@ -1,0 +1,7 @@
+DWM
+
+/usr/local/bin/dwm-setup
+~/.dwmrc & exec dwm
+
+~/.local/share/suckless/
+
