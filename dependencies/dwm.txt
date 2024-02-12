@@ -7,3 +7,4 @@ export CAPTH=$CPATH:/usr/include/c++/13/
 
 
 sudo dnf install xev
+sudo dnf install xbacklight
