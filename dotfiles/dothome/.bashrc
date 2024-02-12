@@ -1,6 +1,4 @@
 PROMPT_DIRTRIM=3;
-export UNI="$HOME/Documents/UniOneDrive/"
-export SUCK="$HOME/.local/share/suckless/"
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -75,67 +73,15 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-#    "
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-#custom aliases
-#C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023
-alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
-alias cworkf='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Physics/"'
-alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
-alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
-alias cper='cd "/mnt/c/Users/hamst/OneDrive/"'
-
-#alias cfd='cd "/run/media/JimBob/James Drive/"'
-#alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
-#Fedora laptop
-alias cfu='cd "$UNI"'
-alias cfp='cd "$UNI/Physics/FVV302b Solid State/"'
-alias cfpp='cd "$UNI/Physics/Practicals/Sem2/"'
-alias cfw='cd "$UNI/Programming/WRPV302/"'
-alias cfl='cd "$UNI/Programming/WRLV302/"'
-alias cfd='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
-
-alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
-alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
-alias cfs='cd "$HOME/.local/share/suckless/"'
-
-
-alias keys='cat "$HOME/aliases.txt"'
-
-
-
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias telij="bash /opt/idea-IU-222.4345.14/bin/idea.sh"
-alias intelij="bash /opt/idea-IU-222.4345.14/bin/idea.sh"
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.config/.bash_aliases ]; then
+    . ~/.config/.bash_aliases
+    source ~/.config/.bash_aliases
+
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -168,3 +114,4 @@ PERL_LOCAL_LIB_ROOT="/home/jim/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROO
 PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
 #PATH=$PATH:/usr/lib/android-sdk/platform-tools/$; export PATH
+for f in /home/jim/.local/share/suckless/statusbar/* ; do PATH="$f:$PATH"; done
