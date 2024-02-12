@@ -13,6 +13,7 @@ java
 
 cool tools:
 pdftk manipulating pdf files (extracting range)
+tldr  better man pages
 
 
 info:
