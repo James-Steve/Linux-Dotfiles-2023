@@ -11,3 +11,5 @@ find * -type f -name "*.pptx" | while read line; do echo $line; done
  for each pptx file in a folder or subfolder do the following
      convert the pptx to an pdf and output it to the value of variable temp
 
+stow -nvS dotconfig -t ~/.config/
+stow all the files in "dotconfig" to ~/.config, i.e create a symbolink from the files in "dotconfig" directory to apear in ~/.config/
