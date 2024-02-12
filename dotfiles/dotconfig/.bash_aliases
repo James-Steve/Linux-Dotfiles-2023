@@ -26,8 +26,8 @@ if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
 #alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
 #Fedora laptop
 alias cu='cd "$UNI"'
-alias cp='cd "$UNI/Physics/FVV302b Solid State/"'
-alias cpp='cd "$UNI/Physics/Practicals/Sem2/"'
+alias cpy='cd "$UNI/Physics/FVV302b Solid State/"'
+alias cpyp='cd "$UNI/Physics/Practicals/Sem2/"'
 alias cw='cd "$UNI/Programming/WRPV302/"'
 alias cl='cd "$UNI/Programming/WRLV302/"'
 alias cld='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
