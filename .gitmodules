@@ -1,0 +1,3 @@
+[submodule "dotfiles/Suckless-Software"]
+	path = dotfiles/Suckless-Software
+	url = https://github.com/James-Steve/Suckless-Software
