@@ -1,3 +1,6 @@
 [submodule "dotfiles/Suckless-Software"]
 	path = dotfiles/Suckless-Software
-	url = https://github.com/James-Steve/Suckless-Software
+	url = https://github.com/James-Steve/Suckless-Software.git
+[submodule "dotfiles/dotconfig/nvim"]
+	path = dotfiles/dotconfig/nvim
+	url = https://github.com/James-Steve/nvim.git
