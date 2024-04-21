@@ -12,17 +12,19 @@ if [[ ${PRETTY_NAME^^} == *${UB^^}* ]]; then
 #Ubuntu
 #C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023
 DISTRO=$UB
+#Folders
 alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
 alias cworkf='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Physics/"'
 alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
 alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
 alias cper='cd "/mnt/c/Users/hamst/OneDrive/"'
-alias cbooks='cd "/mnt/c/Users/hamst/OneDrive/"'
+alias cbooks='cd "/mnt/c/Users/hamst/OneDrive/Documents and Books/Books/"'
 alias wbooks='explorer.exe "C:\Users\hamst\OneDrive\Documents and Books\Books"'
 #alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
 #alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
 alias workr='explorer.exe "C:\Users\hamst\Documents\Projects to big for onedrive\CS"'
 alias cworkr='cd "/mnt/c/Users/hamst/Documents/Projects to big for onedrive/CS/"'
+#Folders
 #Ubuntu
 fi
 
@@ -30,6 +32,7 @@ if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
 #Fedora
 #alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
 DISTRO=$FD
+#Folders
 alias cu='cd "$UNI"'
 alias cpy='cd "$UNI/Physics/FVV302b Solid State/"'
 alias cpyp='cd "$UNI/Physics/Practicals/Sem2/"'
@@ -37,7 +40,8 @@ alias cw='cd "$UNI/Programming/WRPV302/"'
 alias cl='cd "$UNI/Programming/WRLV302/"'
 alias cld='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
 alias cs='cd "$HOME/.local/share/suckless/"'
-#fedora
+#Folders
+#Fedora
 fi
 #All
 # enable color support of ls and also add handy aliases
@@ -59,6 +63,7 @@ fi
 #alias keys='cat "$HOME/aliases.txt"'
 #alias keys='grep "^alias" "$HOME/.config/.bash_aliases"'
 alias keys='awk "/#$DISTRO/{i++}i==1" "$HOME/.config/.bash_aliases" | grep ^"alias"; awk "/#$AL/{k++}k==1" "$HOME/.config/.bash_aliases" | grep ^"alias"'
+alias keysf='awk "/#$DISTRO/{i++}i==1" "$HOME/.config/.bash_aliases" | awk "/#Folders/{i++}i==1" | grep ^"alias"'
 #awk
 
 # Add an "alert" alias for long running commands.  Use like so:
