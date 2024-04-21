@@ -1,30 +1,35 @@
 #!/bin/bash
-UB="ubuntu"
-FD="fedora"
+UB="Ubuntu"
+FD="Fedora"
+AL="All"
+DISTRO=""
 export UNI="$HOME/Documents/UniOneDrive/"
 export SUCK="$HOME/.local/share/suckless/"
 source /etc/os-release
 #echo $PRETTY_NAME
 
 if [[ ${PRETTY_NAME^^} == *${UB^^}* ]]; then
-#    echo "Im in a ubuntu system"
-#custom aliases
-#ubuntu aliases
+#Ubuntu
 #C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023
+DISTRO=$UB
 alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
 alias cworkf='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Physics/"'
 alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
 alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
 alias cper='cd "/mnt/c/Users/hamst/OneDrive/"'
-alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
-alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
+alias cbooks='cd "/mnt/c/Users/hamst/OneDrive/"'
+alias wbooks='explorer.exe "C:\Users\hamst\OneDrive\Documents and Books\Books"'
+#alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
+#alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
+alias workr='explorer.exe "C:\Users\hamst\Documents\Projects to big for onedrive\CS"'
+alias cworkr='cd "/mnt/c/Users/hamst/Documents/Projects to big for onedrive/CS/"'
+#Ubuntu
 fi
 
 if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
-#    echo "Im in a Fedora system"
-#alias cfd='cd "/run/media/JimBob/James Drive/"'
+#Fedora
 #alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
-#Fedora laptop
+DISTRO=$FD
 alias cu='cd "$UNI"'
 alias cpy='cd "$UNI/Physics/FVV302b Solid State/"'
 alias cpyp='cd "$UNI/Physics/Practicals/Sem2/"'
@@ -32,8 +37,9 @@ alias cw='cd "$UNI/Programming/WRPV302/"'
 alias cl='cd "$UNI/Programming/WRLV302/"'
 alias cld='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
 alias cs='cd "$HOME/.local/share/suckless/"'
-
+#fedora
 fi
+#All
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -50,7 +56,10 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-alias keys='cat "$HOME/aliases.txt"'
+#alias keys='cat "$HOME/aliases.txt"'
+#alias keys='grep "^alias" "$HOME/.config/.bash_aliases"'
+alias keys='awk "/#$DISTRO/{i++}i==1" "$HOME/.config/.bash_aliases" | grep ^"alias"; awk "/#$AL/{k++}k==1" "$HOME/.config/.bash_aliases" | grep ^"alias"'
+#awk
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -62,3 +71,4 @@ alias intelij="bash /opt/idea-IU-222.4345.14/bin/idea.sh"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+#All
