@@ -30,18 +30,24 @@ fi
 
 if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
 #Fedora
-#alias cfdw='cd "/run/media/JimBob/James Drive/WRPV301 2023/Lectures/"'
-DISTRO=$FD
 #Folders
+source /etc/profile.d/mssql.sh
 alias cu='cd "$UNI"'
+alias cwb='cd "$UNI/2024/EB121/"'
+alias cwr='cd "$UNI/2024/RNCV111/"'
+alias cwe='cd "$UNI/2024/ECC101/"'
+alias cw='cd "$UNI/2024/"'
 alias cpy='cd "$UNI/Physics/FVV302b Solid State/"'
 alias cpyp='cd "$UNI/Physics/Practicals/Sem2/"'
 alias cw='cd "$UNI/Programming/WRPV302/"'
 alias cl='cd "$UNI/Programming/WRLV302/"'
 alias cld='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
+alias cdp='cd "$HOME/Documents/PersonalOneDrive/"'
 alias cs='cd "$HOME/.local/share/suckless/"'
+alias s='dwmswallow "$WINDOWID" -c'
 #Folders
 #Fedora
+export CW="'$UNI/2024/'"
 fi
 #All
 # enable color support of ls and also add handy aliases
