@@ -45,6 +45,7 @@ alias cld='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
 alias cdp='cd "$HOME/Documents/PersonalOneDrive/"'
 alias cs='cd "$HOME/.local/share/suckless/"'
 alias s='dwmswallow "$WINDOWID" -c'
+alias cbooks='cd "$HOME/Documents/PersonalOneDrive/Documents and Books/Books/"'
 #Folders
 #Fedora
 export CW="'$UNI/2024/'"
