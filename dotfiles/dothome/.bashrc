@@ -115,3 +115,4 @@ PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
 #PATH=$PATH:/usr/lib/android-sdk/platform-tools/$; export PATH
 for f in /home/jim/.local/share/suckless/statusbar/* ; do PATH="$f:$PATH"; done
+export PATH="$PATH:/opt/mssql-tools18/bin"
