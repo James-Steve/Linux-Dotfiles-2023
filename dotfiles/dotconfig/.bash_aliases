@@ -30,6 +30,7 @@ fi
 
 if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
 #Fedora
+DISTRO=$FD
 #Folders
 source /etc/profile.d/mssql.sh
 alias cu='cd "$UNI"'
