@@ -1,3 +1,7 @@
+export PATH=$PATH:/home/jim/.local/bin
+export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
+export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 PROMPT_DIRTRIM=3;
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -94,7 +98,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-eval "$(oh-my-posh --init --shell bash --config ~/oh-my-posh/themes/atomic.omp.json)"
+eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/atomic.omp.json)"
 ####eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/atomic.omp.json)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
