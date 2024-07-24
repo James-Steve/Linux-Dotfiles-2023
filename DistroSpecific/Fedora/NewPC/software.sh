@@ -18,10 +18,10 @@ done
 #curl with bash install script builtin
 source curlbash.sh
 
-#manual installation
-source 
-manual.sh
-
 #Comands after all is intall
 nvm install node
 oh-my-posh font install meslo
+dotnet tool install --global csharp-ls
+
+#manual installation
+source manual.sh
