@@ -1,4 +1,5 @@
 export PATH=$PATH:/home/jim/.local/bin
+export PATH="$PATH:/home/jim/Documents/Source/Suckless-Software/statusbar"
 export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
 export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
@@ -118,5 +119,9 @@ PERL_LOCAL_LIB_ROOT="/home/jim/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROO
 PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
 #PATH=$PATH:/usr/lib/android-sdk/platform-tools/$; export PATH
-for f in /home/jim/.local/share/suckless/statusbar/* ; do PATH="$f:$PATH"; done
+#for f in /home/jim/Documents/Source/Suckless-Software/statusbar/* ; do
+#    echo $f
+#    PATH="$f:$PATH"
+#    export PATH
+#done
 export PATH="$PATH:/opt/mssql-tools18/bin"
