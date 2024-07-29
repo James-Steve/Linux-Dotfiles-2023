@@ -1,4 +1,5 @@
 #latex
+if [ ! -d "/usr/local/texlive/$(date +%Y)/bin/" ]; then 
 mkdir /tmp/texlive
 cd /tmp/texlive
 wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip
@@ -38,3 +39,4 @@ export MANPATH="$MANPATH:/usr/local/texlive/($(date +%Y)/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/($(date +%Y)/texmf-dist/doc/info"
 export PATH="/usr/local/texlive/($(date +%Y)/bin/x86_64-linux:$PATH"
 sudo env PATH="$PATH" tlmgr install latexmk
+fi
