@@ -24,4 +24,4 @@ oh-my-posh font install meslo
 dotnet tool install --global csharp-ls
 
 #manual installation
-source manual.sh
+source manual/init.sh

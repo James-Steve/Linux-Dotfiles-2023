@@ -27,4 +27,6 @@ libX11-devel
 libXinerama-devel
 dotnet-sdk-8.0
 aspnetcore-runtime-8.0
-
+xset
+xinput
+picom
