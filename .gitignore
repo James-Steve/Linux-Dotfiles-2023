@@ -1,9 +1,8 @@
 **/packer_compiled.lua
 **/**/packer_*
 *packer_*
-
-
-**/libre*
-dotfiles/dotdocuments/Source/Suckless-Software/dwm/*.o
+**/**/*.o
 dotfiles/dotdocuments/Source/Suckless-Software/dwm/dwm
+dotfiles/dotdocuments/Source/Suckless-Software/dwm/*.o
 dotfiles/dotdocuments/Source/Suckless-Software/dwm/drw.o
+**/libre*
