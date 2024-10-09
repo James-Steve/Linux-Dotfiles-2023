@@ -11,6 +11,7 @@
     ls-tracked = ls-tree --full-tree --name-only -r HEAD
     untrack-ignored-files = !git rm -r --cached . && git add -A && git commit -am "Remove ignored files" 
     ch=checkout
+    search= "!f(){ git grep \"$1\" $(git rev-list --all) ; }; f"
 
 
 #helpfull commands
