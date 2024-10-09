@@ -1,8 +1,10 @@
+LOCATION="Port Elizabeth"
 export PATH=$PATH:/home/jim/.local/bin
 export PATH="$PATH:/home/jim/Documents/Source/Suckless-Software/statusbar"
 export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
 export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+export LOCATION
 PROMPT_DIRTRIM=3;
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -118,10 +120,4 @@ PERL5LIB="/home/jim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/jim/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
-#PATH=$PATH:/usr/lib/android-sdk/platform-tools/$; export PATH
-#for f in /home/jim/Documents/Source/Suckless-Software/statusbar/* ; do
-#    echo $f
-#    PATH="$f:$PATH"
-#    export PATH
-#done
 export PATH="$PATH:/opt/mssql-tools18/bin"

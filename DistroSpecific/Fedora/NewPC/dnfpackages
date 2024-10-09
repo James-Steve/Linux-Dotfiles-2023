@@ -61,3 +61,5 @@ brightnessctl
 playerctl
 acpi
 samba
+samba-Client
+luarocks

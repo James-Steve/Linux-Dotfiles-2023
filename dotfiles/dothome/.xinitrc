@@ -1,12 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 #feh --no-fehbg --bg-scale "$HOME/Documents/Wallpapers/ATAT.jpg"
+feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/3840x2160-bmw-e30-digital-art-4k_1540756037.jpg
 DIR=/home/jim/Documents/Source/Suckless-Sofware
-#PATH="/home/jim/.local/share/suckless/statusbar/:$PATH"
-#PATH="home/jim/Documents/Source/Suckless-Software/statusbar/:$PATH"
-#export $PATH
-#PATH="home/jim/Documents/Source/Suckless-Software/statusbar/sb-clock:$PATH"
-#PATH="$DIR/statusbar/sb-clock:$PATH"
-#for f in /home/jim/Documents/Source/Suckless-Software/statusbar/* ; do PATH="$f:$PATH"; done
 picom -b
 gsettings  set  org.gnome.desktop.peripherals.mouse  accel-profile  flat
 xinput set-prop 10 323 -0.5

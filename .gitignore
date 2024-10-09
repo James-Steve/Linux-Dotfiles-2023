@@ -2,7 +2,9 @@
 **/**/packer_*
 *packer_*
 **/**/*.o
-dotfiles/dotdocuments/Source/Suckless-Software/dwm/dwm
-dotfiles/dotdocuments/Source/Suckless-Software/dwm/*.o
+*.o
+**/*.o
+**dotfiles/dotdocuments/Source/Suckless-Software/dwm/dwm
+**dotfiles/dotdocuments/Source/Suckless-Software/dwm/*.o
 dotfiles/dotdocuments/Source/Suckless-Software/dwm/drw.o
 **/libre*

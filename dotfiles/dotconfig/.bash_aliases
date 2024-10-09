@@ -3,8 +3,13 @@ UB="Ubuntu"
 FD="Fedora"
 AL="All"
 DISTRO=""
-export UNI="$HOME/Documents/UniOneDrive/"
-export SUCK="$HOME/.local/share/suckless/"
+#export UNI="$HOME/Documents/UniOneDrive/"
+export UNI="$HOME/Documents/ThirdYear/"
+export SUCK="$HOME/Documents/Source/Suckless-Software/"
+export DOTFILES="$HOME/Documents/Linux-Dotfiles-2023/"
+export PERSONAL="$HOME/Documents/PersonalOnedrive/"
+export OPENSOURCE="$HOME/Documents/Source/"
+export PROJECTS="$HOME/Documents/Projects/"
 source /etc/os-release
 #echo $PRETTY_NAME
 
@@ -34,19 +39,39 @@ DISTRO=$FD
 #Folders
 source /etc/profile.d/mssql.sh
 alias cu='cd "$UNI"'
-alias cwb='cd "$UNI/2024/EB121/"'
-alias cwr='cd "$UNI/2024/RNCV111/"'
-alias cwe='cd "$UNI/2024/ECC101/"'
-alias cw='cd "$UNI/2024/"'
-alias cpy='cd "$UNI/Physics/FVV302b Solid State/"'
-alias cpyp='cd "$UNI/Physics/Practicals/Sem2/"'
-alias cw='cd "$UNI/Programming/WRPV302/"'
-alias cl='cd "$UNI/Programming/WRLV302/"'
-alias cld='cd "$HOME/Documents/Linux-Dotfiles-2023/"'
-alias cdp='cd "$HOME/Documents/PersonalOneDrive/"'
-alias cs='cd "$HOME/.local/share/suckless/"'
-alias s='dwmswallow "$WINDOWID" -c'
-alias cbooks='cd "$HOME/Documents/PersonalOneDrive/Documents and Books/Books/"'
+#alias cwb='cd "$UNI/2024/EB121/"'
+#alias cwr='cd "$UNI/2024/RNCV111/"'
+#alias cwe='cd "$UNI/2024/ECC101/"'
+#alias cw='cd "$UNI/2024/"'
+#alias cpy='cd "$UNI/Physics/FVV302b Solid State/"'
+#alias cpyp='cd "$UNI/Physics/Practicals/Sem2/"'
+#alias cw='cd "$UNI/Programming/WRPV302/"'
+#alias cl='cd "$UNI/Programming/WRLV302/"'
+#alias cdp='cd "$HOME/Documents/PersonalOneDrive/"'
+#alias cs='cd "$HOME/Documents/Source/Suckless-Software"'
+#alias s='dwmswallow "$WINDOWID" -c'
+alias cld='cd "$DOTFILES"'
+alias clds='cd "$DOTFILES/DistroSpecific/Fedora/"'
+alias cldd='cd "$DOTFILES/dotfiles"'
+alias clddh='cd "$DOTFILES/dotfiles/dothome"'
+alias clddc='cd "$DOTFILES/dotfiles/dotconfig"'
+alias clddd='cd "$DOTFILES/dotfiles/dotdocuments"'
+
+alias cs='cd "$SUCK"'
+alias copen='cd "$OPENSOURCE"'
+alias cproj='cd "$PROJECTS"'
+
+alias cup='cd "$UNI/Physics/"'
+alias cupp='cd "$UNI/Physics/Pracs/"'
+alias cuss='cd "$UNI/Physics/FVV302b/"'
+alias cuxr='cd "$UNI/Physics/FVV302a/Xray/"'
+alias cucr='cd "$UNI/Physics/FVV302a/Crystall/"'
+alias culv='cd "$UNI/WRLV302"'
+alias cbooks='cd "$PERSONAL/Documents and Books/Books/"'
+
+alias screenpv='xrandr --output DP-1 --right-of eDP-1 --mode 1920x1080'
+alias screenpvo='xrandr --output DP-1 --off'
+
 #Folders
 #Fedora
 export CW="'$UNI/2024/'"
@@ -84,4 +109,7 @@ alias intelij="bash /opt/idea-IU-222.4345.14/bin/idea.sh"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+#weather
+alias weather='curl wttr.in'
 #All
+

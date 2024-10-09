@@ -1,5 +1,17 @@
 #! /bin/bash
 su 
+if [ $# -eq 0 ] && [ "$USER" = "root" ];
+  then
+    echo "You need to supply the username as a argument"
+    exit 128
+fi
+if [ ! "$USER" = "root" ];
+then
+    USER_CURRENT=$USER
+else 
+    USER_CURRENT=$1
+fi
+
 #run before
 #add rpm fusion repo
 sudo dnf install \https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
