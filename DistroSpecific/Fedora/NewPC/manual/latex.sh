@@ -38,5 +38,28 @@ EOF
 export MANPATH="$MANPATH:/usr/local/texlive/($(date +%Y)/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/($(date +%Y)/texmf-dist/doc/info"
 export PATH="/usr/local/texlive/($(date +%Y)/bin/x86_64-linux:$PATH"
-sudo env PATH="$PATH" tlmgr install latexmk
+sudo env PATH="$PATH" tlmgr install latexmk biblatex cleveref
+sudo env PATH="$PATH" tlmgr upadte --all
 fi
+
+USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+if [ ! -d $USER_HOME/Documents/Source ]; then
+mkdir $USER_HOME/Documents/Source
+fi
+cd $USER_HOME/Documents/Source
+if [ ! -d $USER_HOME/Documents/Source/biber ]; then
+git clone https://github.com/plk/biber
+else
+cd biber
+fi
+get ch dev
+git pull 
+git fetch --all
+git fetch --tags
+latesttag=$(git describe --tags)
+echo checking out ${latesttag}
+git checkout ${latesttag}
+
+perl Build.PL
+./Build installdeps
+./Build install
