@@ -13,3 +13,17 @@ find * -type f -name "*.pptx" | while read line; do echo $line; done
 
 stow -nvS dotconfig -t ~/.config/
 stow all the files in "dotconfig" to ~/.config, i.e create a symbolink from the files in "dotconfig" directory to apear in ~/.config/
+
+
+terminal commands:
+Alt+f move forward a word
+Alt+b move back a word
+Ctrl+a goto start of line
+Ctrl+e goto to end of line
+Ctrl+u delete before cursor to start of line
+Ctrl+k delete after cursor to end of line
+Ctrl+w delete word before cursor 
+Alt+d delete word after cursor
+Alt+t moves word behind previous word
+
+for more https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
