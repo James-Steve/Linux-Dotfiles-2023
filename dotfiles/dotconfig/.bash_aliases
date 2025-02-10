@@ -61,6 +61,8 @@ alias cs='cd "$SUCK"'
 alias copen='cd "$OPENSOURCE"'
 alias cproj='cd "$PROJECTS"'
 
+alias pv='cd "$HOME/Documents/Projects/PVSraper/"'
+alias chon='cd "$HOME/Documents/Honours/"'
 alias cup='cd "$UNI/Physics/"'
 alias cupp='cd "$UNI/Physics/Pracs/"'
 alias cuss='cd "$UNI/Physics/FVV302b/"'
@@ -69,7 +71,7 @@ alias cucr='cd "$UNI/Physics/FVV302a/Crystall/"'
 alias culv='cd "$UNI/WRLV302"'
 alias cbooks='cd "$PERSONAL/Documents and Books/Books/"'
 
-alias screenpv='xrandr --output DP-1 --right-of eDP-1 --mode 1920x1080'
+alias screenpv='xrandr --output DP-1 --right-of eDP-1 --mode 1920x1080; feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
 alias screenpvo='xrandr --output DP-1 --off'
 
 #Folders

@@ -22,4 +22,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     $USER_HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
 nvim --headless -c "PackerSync" -c qall
 nvim --headless -c "MasonInstall ast-grep rust-analyzer lua-language-server ltex-ls bash-language-server grammarly-languageserver omnisharp omnisharp-mono csharp-language-server netcoredbg debugpy luaformatter" -c qall
+nvim --headless -c "MasonInstall clangd json-lsp jsonld-lsp pyright  texlab jdtls yaml-language-server yamlls jdlts autoflake autopep8 blackd-client blue" -c qall
+nvim --headless -c "MasonInstall clang-format darker docformatter isort prettier pyink sql-formatter sqlfmt" -c qall
+
 

@@ -9,4 +9,5 @@ gsettings  set  org.gnome.desktop.peripherals.mouse  accel-profile  flat
 xinput set-prop 10 323 -0.5
 xset -dpms
 xset s off
+bluetoothctl power off
 dwmblocks
