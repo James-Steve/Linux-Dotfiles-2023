@@ -12,6 +12,7 @@ git clone https://github.com/neovim/neovim.git
 else
 cd neovim
 git pull
+git fetch --all --tags --prune --force
 git checkout stable
 cd ..
 fi
