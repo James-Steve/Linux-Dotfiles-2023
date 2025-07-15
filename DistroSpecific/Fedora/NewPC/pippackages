@@ -38,3 +38,5 @@ sphinx-remove-toctrees
 sphinx-design
 pydata-sphinx-theme
 conda-lock
+lxml-stubs
+pulsemixer
