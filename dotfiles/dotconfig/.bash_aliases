@@ -36,6 +36,8 @@ fi
 if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
 #Fedora
 DISTRO=$FD
+HON=$HOME/Documents/Honours
+export HON
 #Folders
 source /etc/profile.d/mssql.sh
 alias cu='cd "$UNI"'
@@ -62,7 +64,6 @@ alias copen='cd "$OPENSOURCE"'
 alias cproj='cd "$PROJECTS"'
 
 alias pv='cd "$HOME/Documents/Projects/PVSraper/"'
-alias chon='cd "$HOME/Documents/Honours/"'
 alias cup='cd "$UNI/Physics/"'
 alias cupp='cd "$UNI/Physics/Pracs/"'
 alias cuss='cd "$UNI/Physics/FVV302b/"'
@@ -70,9 +71,24 @@ alias cuxr='cd "$UNI/Physics/FVV302a/Xray/"'
 alias cucr='cd "$UNI/Physics/FVV302a/Crystall/"'
 alias culv='cd "$UNI/WRLV302"'
 alias cbooks='cd "$PERSONAL/Documents and Books/Books/"'
+alias chon='cd "$HON"'
+alias ceis='cd "$HON/WEIM411-EnviromentInformationSystems/"'
+alias ctreat='cd "$HON/WHPV400-Treatise/"'
+alias cuse='cd "$HON/WEUV401-Usability/"'
+alias cware='cd "$HON/WDWV401-DataWarehousing/"'
+alias cproj='cd "$HON/WHVV401-ProjectManagment/"'
+alias cfun='cd "$HON/WHQV401-FunctionalProgramming/"'
+alias whon='nautilus "$HON"'
+treat="$HON/WHPV400-Treatise/"
 
-alias screenpv='xrandr --output DP-1 --right-of eDP-1 --mode 1920x1080; feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
-alias screenpvo='xrandr --output DP-1 --off'
+
+alias screenpvold='xrandr --output DP-1 --right-of eDP-1 --mode 1920x1080; feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
+alias screenpv='xrandr --output DP-7 --right-of eDP-1 --mode 1920x1080; xrandr --output eDP-1 --off; xrandr --output DP-5 --right-of DP-7 --mode 1920x1080; feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
+alias background='feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
+alias screenfeh='feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
+alias screenpvo='xrandr --output DP-7 --off; xrandr --output DP-5 --off; xrandr --output eDP-1 --auto'
+alias screenpvoffold='xrandr --output DP-1 --off'
+alias getscreens='xrandr | grep "connected"'
 
 #Folders
 #Fedora
@@ -95,8 +111,7 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-#alias keys='cat "$HOME/aliases.txt"'
-#alias keys='grep "^alias" "$HOME/.config/.bash_aliases"'
+#starts printing lines from the first occurence of the variable value DISTRO (items sandwhiched inbewteen Fedora will be printed)
 alias keys='awk "/#$DISTRO/{i++}i==1" "$HOME/.config/.bash_aliases" | grep ^"alias"; awk "/#$AL/{k++}k==1" "$HOME/.config/.bash_aliases" | grep ^"alias"'
 alias keysf='awk "/#$DISTRO/{i++}i==1" "$HOME/.config/.bash_aliases" | awk "/#Folders/{i++}i==1" | grep ^"alias"'
 #awk
@@ -113,5 +128,8 @@ alias la='ls -A'
 alias l='ls -CF'
 #weather
 alias weather='curl wttr.in'
+#Usefully fuzzy find 
+# raw command find . -type f | fzf --multi  | sed 's/.*/"&"/g'
+alias fuzzy="find . -type f | fzf --multi  | sed 's/.*/\"&\"/g'"
 #All
 
