@@ -48,3 +48,17 @@ for more https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
 
 git tag | grep "[0-9]" | sort --reverse | head -n 1
 pipes get tags into grep which filters for digits and then pipes that into sort which gets highest number then into head which gets first result
+stow: 
+
+
+git rebase after commit:
+git rebase -i <After this commit Id>
+Then replace "pick" on second and subsequent commits with "squash"
+
+git modify commit:
+git rebase -i <commit ID>~ 
+Then replace "pick" with "edit"
+the "~" is necessary as you need to reapply commits on top of the previous commit
+
+stow -nvS .config/ -t ~/.config
+will create siymbolic links from all files in .config to ~/.config
