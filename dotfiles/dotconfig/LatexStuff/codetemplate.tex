@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[backend=biber,sorting=none]{biblatex}
+\usepackage{caption}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true,citecolor=black]{hyperref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{upquote}
+\usepackage{color}
+\usepackage{titling}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={180mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+%\addbibresource{~/.config/LatexStuff/bibtex/bib/physics.bib}
+\addbibresource{sources.bib}
+\setlength{\parindent}{0pt}
+\setlength{\droptitle}{-5em}
+
+\title{Functional Programming: A1}
+\author{Robert James Stevenson}
+\date{08 May 2025}
+
+\newcommand{\mycomment}[1]{}
+\newcommand{\quotes}[1]{``#1''}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+\lstdefinelanguage{FSharp}%
+{morekeywords={let, new, match, with, rec, open, module, namespace, type, of, member, % 
+and, for, while, true, false, in, do, begin, end, fun, function, return, yield, try, %
+mutable, if, then, else, cloud, async, static, use, abstract, interface, inherit, finally },
+  otherkeywords={ let!, return!, do!, yield!, use!, var, from, select, where, order, by },
+  keywordstyle=\color{bluekeywords},
+  sensitive=true,
+  basicstyle=\footnotesize\ttfamily,
+	breaklines=true,
+  xleftmargin=\parindent,
+  aboveskip=\bigskipamount,
+	tabsize=4,
+  morecomment=[l][\color{greencomments}]{///},
+  morecomment=[l][\color{greencomments}]{//},
+  morecomment=[s][\color{greencomments}]{{(*}{*)}},
+  morestring=[b]",
+  showstringspaces=false,
+  literate={`}{\`}1,
+  stringstyle=\color{redstrings},
+}
+\begin{document}
+\maketitle
+\section{Theory}
+A high order function is a function whose arguments contain one or many functions. The function passed to the high order function is called a \quotes{callback}.
+\subsection{Filter}
+Filter iterates over every element in a list based data structure and returns a subset of the list, based on the conditions specified by the callback function.
+At every iteration it calls the callback function (usually returns a boolean value) and passes the element to callback function. if the callback returns true,
+the element is added to output list, else it's not added.
+\\
+Only the filter and list is passed to the function.
+\subsection{Fold}
+As the name suggests it folds (condenses) a collection (list) data structure into a single value(integer, string, another collection).
+The reduction method is based on the callback function. It merges each element in collection into one value.
+\\
+Fold takes three arguments, they are the collection, the callback function and the accumulator (sometimes called initial value) which is returned by fold.
+\subsection{Reduce}
+Reduce is essentially is the same as Fold, except reduce doesn't have an accumulator argument, it assumes the first element in the collection as the 
+accumulator and then iterates from the second value in the collection onwards (iteration starts at element 2). In my implementation reduce actually 
+calls fold. \autocite{codecamp} \autocite{Philip} \autocite{geeks}.
+\section{Implementation}
+\subsection{Map}
+\lstinputlisting[language=FSharp,linerange={1-6}]{A1.fsx}
+\subsection{Filter}
+\lstinputlisting[language=FSharp,linerange={8-16}]{A1.fsx}
+\subsection{Fold}
+\lstinputlisting[language=FSharp,linerange={19-25}]{A1.fsx}
+\subsection{Reduce}
+\lstinputlisting[language=FSharp,linerange={28-44}]{A1.fsx}
+
+\printbibliography
+\end{document}
+
