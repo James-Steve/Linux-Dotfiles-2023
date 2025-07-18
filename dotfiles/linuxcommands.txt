@@ -11,9 +11,26 @@ find * -type f -name "*.pptx" | while read line; do echo $line; done
  for each pptx file in a folder or subfolder do the following
      convert the pptx to an pdf and output it to the value of variable temp
 
+Search and replace within files using sed
+find /path/to/files -type f -exec sed -i 's/oldstring/new string/g' {} \;
+
+find . -name "*.pptx" | while read line; do mv "$line" $(echo "$line"| sed -e 's/ //g') ; done
+for each .pptx file rename the file without any whitespace
+
+for f in *\ *; do mv "$f" "${f// /_}"; done
+remove white space from file names
 stow -nvS dotconfig -t ~/.config/
 stow all the files in "dotconfig" to ~/.config, i.e create a symbolink from the files in "dotconfig" directory to apear in ~/.config/
 
+find . -type f | fzf --multi  | sed 's/.*/"&"/g' | xargs okular
+open files with okular matched with fzf
+find all the files in a directory and subdirectories
+pipe it to fzf (fuzzy finder) in a multi selection mode
+choices from fzf get piped to sed which replaces any-character many-times (.*) with the portion of the matched pattern (&) surrounded by quotes
+note sed 's/./"&"/g' will put quotes around every character (foo becomes "f""o""o")
+
+ssh pv@pvlabserver.nmmu.ac.za -X sudo -S -u pv nm-connection-editor 
+open a graphical program from a remote machine on the local machine with sudo privileges
 
 terminal commands:
 Alt+f move forward a word
@@ -27,3 +44,7 @@ Alt+d delete word after cursor
 Alt+t moves word behind previous word
 
 for more https://gist.github.com/tuxfight3r/60051ac67c5f0445efee
+
+
+git tag | grep "[0-9]" | sort --reverse | head -n 1
+pipes get tags into grep which filters for digits and then pipes that into sort which gets highest number then into head which gets first result
