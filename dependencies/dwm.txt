@@ -1,3 +1,4 @@
+Ctrl + Workspace number  peaks a workspace on you
 instructions on how to install dwm on fedora
 https://gitlab.com/-/snippets/2048501
 libstdc++-12-dev
