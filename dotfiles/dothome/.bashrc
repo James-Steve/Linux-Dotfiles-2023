@@ -1,10 +1,10 @@
 LOCATION="Port Elizabeth"
-export PATH=$PATH:/home/jim/.local/bin
-export PATH=$PATH:/home/jim/.cargo/bin
+export PATH="$PATH:/home/jim/.local/bin"
+export PATH="$PATH:/home/jim/.cargo/bin"
 export PATH="$PATH:/home/jim/Documents/Source/Suckless-Software/statusbar"
-export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
-export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
-export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
+#export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
+#export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
+#export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 export BROWSER=firefox
 export LOCATION
 #export GOBIN=$HOME/.local/bin/
@@ -116,7 +116,7 @@ export NVM_DIR="$HOME/.nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-export PATH="/usr/local/texlive/2023/bin/x86_64-linux/:$PATH"
+#export PATH="/usr/local/texlive/2024/bin/x86_64-linux/:$PATH"
 
 PATH="/home/jim/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/jim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -125,4 +125,3 @@ PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
 export PATH="$PATH:/opt/mssql-tools18/bin"
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
-
