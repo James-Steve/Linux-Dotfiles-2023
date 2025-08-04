@@ -62,3 +62,6 @@ the "~" is necessary as you need to reapply commits on top of the previous commi
 
 stow -nvS .config/ -t ~/.config
 will create siymbolic links from all files in .config to ~/.config
+
+du -hs * | sort -h
+List files size in a human-readable format
