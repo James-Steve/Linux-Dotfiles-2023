@@ -1,3 +1,6 @@
 Neovim
 disable snippets from lsp server https://neovim.discourse.group/t/how-to-disable-lsp-snippets/922
 Vimtex remap commands for latex file types
+
+dwm depends remove shortcut
+
