@@ -4,3 +4,6 @@
 [submodule "dotfiles/dotconfig/nvim"]
 	path = dotfiles/dotconfig/nvim
 	url = https://github.com/James-Steve/nvim.git
+[submodule "dotfiles/dotconfig/alacritty/themes"]
+	path = dotfiles/dotconfig/alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme

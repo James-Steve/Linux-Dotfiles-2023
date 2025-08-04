@@ -1,0 +1,61 @@
+[env]
+TERM = "xterm-256color"
+[general]
+live_config_reload = true
+import = [
+#"~/.config/alacritty/themes/themes/Cobalt2.toml"
+#"~/.config/alacritty/themes/themes/cyber_punk_neon.toml"
+#"~/.config/alacritty/themes/themes/gnome_terminal.toml"
+#"~/.config/alacritty/themes/themes/hyper.toml"
+"~/.config/alacritty/themes/themes/xterm.toml"
+]
+
+[window]
+opacity = 0.6
+
+[font]
+normal = {family = "MesloLGM Nerd Font Mono", style = "Regular"}
+size = 14.5
+
+[colors.normal]
+magenta = '#cd00cd'
+
+[scrolling]
+history = 10000 
+multiplier = 3
+
+[cursor]
+thickness = 0.15
+
+[keyboard]
+bindings = [
+#{ <key>, <mods>, <mode>, <command> | <chars> | <action> },
+#Typing
+#{ <key>, <mods>, ,  <action> },
+#Copy and Past
+{ mods = "Alt", key = "V", action = "Paste" },
+{ mods = "Alt", key = "C", action = "Copy" },
+#Font Size
+{ mods = "Shift|Alt", key = "+",  action = "IncreaseFontSize" },
+{ mods = "Alt", key = "-",  action = "DecreaseFontSize" },
+{ mods = "Alt", key = "=",  action = "ResetFontSize" },
+#Scrolling
+{ mods = "Alt" , key = "j",  action =  "scrollLineDown" },
+{ mods = "Alt" , key = "k",  action =  "scrollLineUp" },
+{ mods = "Alt" , key = "d",  action =  "ScrollHalfPageDown" },
+{ mods = "Alt" , key = "u",  action =  "ScrollHalfPageUp" },
+{ mods = "Alt" , key = "g",  action =  "ScrollToTop" },
+{ mods = "Alt|Shift" , key = "g",  action =  "ScrollToBottom" },
+
+#Vim Mode
+{ key = "Space", mods = "Alt|Shift" , action =  "ToggleViMode" },
+{ key = "Space", mods = "Alt|Shift" , action =  "ToggleViMode", mode = "Vi"},
+{ key = "h", action = "Left", mode = "Vi"},
+{ key = "l", action = "Right", mode = "Vi"},
+{ key = "j", action = "Down", mode = "Vi"},
+{ key = "k", action = "Up", mode = "Vi"},
+{ key = "k", action = "Up", mode = "Vi"},
+]
+
+
+
