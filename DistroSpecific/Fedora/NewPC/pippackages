@@ -7,7 +7,6 @@ openpyxl
 Scrapy
 selenium
 scikit-learn
-
 scipy
 joblib
 threadpoolctl

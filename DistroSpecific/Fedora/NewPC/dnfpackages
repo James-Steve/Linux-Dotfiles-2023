@@ -4,7 +4,8 @@ tldr
 pdftk
 okular
 syncthing
-java-11-openjdk
+java
+nodejs
 npm
 go
 clang
@@ -29,6 +30,8 @@ libX11-devel
 libXinerama-devel
 dotnet-sdk-8.0
 aspnetcore-runtime-8.0
+dotnet-sdk-9.0
+aspnetcore-runtime-9.0
 xset
 xinput
 picom
