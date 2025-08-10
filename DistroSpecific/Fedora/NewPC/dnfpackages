@@ -78,3 +78,5 @@ unison
 python3.10-devel
 libxcb-doc
 polybar
+rust
+cargo

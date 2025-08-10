@@ -1,36 +1,35 @@
 #! /bin/bash
-# run by using sudo -u USERNAME bash freshinstall
-if [ $# -eq 0 ] && [ "$USER" = "root" ];
+if [ "$SUDO_USER" = "root" ];
   then
-    echo "You need to supply the username as a argument"
+    echo "You to run this from a user profile using sudo bash"
     exit 128
 fi
-USER_CURRENT=""
-if [ ! "$USER" = "root" ];
-then
-    USER_CURRENT=$USER
-else 
-    USER_CURRENT=$1
-fi
-USER_RUN=$1
-export USER_CURRENT
-export USER_RUN
-USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
-export USER_HOME
+export USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
 cd $USER_HOME
 rm -rf .bashrc .gitconfig .poshthemes
 if [ ! -d $USER_HOME/.config ]; then
 	mkdir .config
+    chown -R $SUDO_USER:$SUDO_USER .config
+    chown -R $SUDO_USER:$SUDO_USER .config/.*
 fi
 if [ ! -d $USER_HOME/Documents/Linux-Dotfiles-2023 ]; then
 	echo "here"
 	git clone https://github.com/James-Steve/Linux-Dotfiles-2023.git
+    chown -R $SUDO_USER:$SUDO_USER Linux-Dotfiles-2023
+    chown -R $SUDO_USER:$SUDO_USER Linux-Dotfiles-2023/.*
 fi
 cd $USER_HOME/Documents/Linux-Dotfiles-2023/dotfiles
+git submodule update --init
+chown -R $SUDO_USER:$SUDO_USER *
+chown -R $SUDO_USER:$SUDO_USER .*
 stow -vS dotconfig -t $USER_HOME/.config/
 stow -vS dothome -t $USER_HOME/
 stow -vS dotdocuments -t $USER_HOME/Documents
+
+
 cd $USER_HOME/.config/nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  $USER_HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
-source  NewPC/software.sh "$USER_CURRENT"
+chown -R $SUDO_USER:$SUDO_USER $USER_HOME/.local
+
+source  NewPC/software.sh
