@@ -5,6 +5,10 @@ if [ "$SUDO_USER" = "root" ];
     exit 128
 fi
 export USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+echo $USER_HOME
+echo $USER_HOME
+echo $USER_HOME
+echo $USER_HOME
 cd $USER_HOME
 rm -rf .bashrc .gitconfig .poshthemes
 if [ ! -d $USER_HOME/.config ]; then
