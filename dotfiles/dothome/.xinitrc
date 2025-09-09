@@ -1,7 +1,8 @@
 #!/bin/bash
-#feh --no-fehbg --bg-scale "$HOME/Documents/Wallpapers/ATAT.jpg"
-#feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/3840x2160-bmw-e30-digital-art-4k_1540756037.jpg
-#bash $HOME/Documents/linux/pc-client-linux.sh
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+ibus-daemon -dr &
 feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/BackGroundPopeLeo.png
 DIR=/home/rob/Documents/Source/Suckless-Sofware
 picom -b
@@ -13,6 +14,6 @@ xset s off
 bluetoothctl power off
 solaar -w hide
 xinput --set-prop 8 'libinput Accel Profile Enabled' 0, 1
-dwmblocks 
+#dwmbar &
+#dwmblocks &
 #umonitor -n --daemonize
-#feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/Penquins.jpg

@@ -5,10 +5,6 @@ if [ "$SUDO_USER" = "root" ];
     exit 128
 fi
 export USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
-echo $USER_HOME
-echo $USER_HOME
-echo $USER_HOME
-echo $USER_HOME
 cd $USER_HOME
 rm -rf .bashrc .gitconfig .poshthemes
 if [ ! -d $USER_HOME/.config ]; then
@@ -16,8 +12,11 @@ if [ ! -d $USER_HOME/.config ]; then
     chown -R $SUDO_USER:$SUDO_USER .config
     chown -R $SUDO_USER:$SUDO_USER .config/.*
 fi
+if [ ! -d $USER_HOME/Documents ]; then
+    mkdir Documents
+    chown -R $SUDO_USER:$SUDO_USER Documents
+fi
 if [ ! -d $USER_HOME/Documents/Linux-Dotfiles-2023 ]; then
-	echo "here"
 	git clone https://github.com/James-Steve/Linux-Dotfiles-2023.git
     chown -R $SUDO_USER:$SUDO_USER Linux-Dotfiles-2023
     chown -R $SUDO_USER:$SUDO_USER Linux-Dotfiles-2023/.*
