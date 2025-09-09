@@ -1,4 +1,5 @@
 # Todo List
+Move this to taskell
 
 ## Install Scripts
 ### Bootstrap Scripts (DistroSpecific ones)
@@ -22,4 +23,10 @@
 - [ ] Rofi Dependencies
 - [ ] Rofi Config
 
+## General Linux
+- [ ] Move Audio from pulse to pipewire
+- [ ] sort out keyboard with usb headset (headset blocks keyboard, when it is off, have to plug an replug it in)
+
+
 ## Software and Tool configs
+
