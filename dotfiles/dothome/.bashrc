@@ -1,6 +1,7 @@
 LOCATION="Port Elizabeth"
 export PATH="$PATH:/home/jim/.local/bin"
 export PATH="$PATH:/home/jim/.cargo/bin"
+export PATH="$PATH:/home/jim/go/bin"
 export PATH="$PATH:/home/jim/Documents/Source/Suckless-Software/statusbar"
 #export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
 #export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
