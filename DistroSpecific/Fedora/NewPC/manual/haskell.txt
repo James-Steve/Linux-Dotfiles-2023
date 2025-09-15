@@ -1,0 +1,14 @@
+haskell-platform
+stack
+ghc
+ghc-vty
+ghc-vty-devel
+
+
+ghc-vty-unix 
+ghc-vty-unix-devel
+ghc-vty-doc
+
+
+
+ghc-tinfo

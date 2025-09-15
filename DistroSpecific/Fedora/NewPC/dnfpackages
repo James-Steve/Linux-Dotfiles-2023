@@ -80,3 +80,6 @@ libxcb-doc
 polybar
 rust
 cargo
+google-noto-color-emoji-fonts
+slock
+rofi

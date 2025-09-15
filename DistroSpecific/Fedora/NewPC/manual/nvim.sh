@@ -20,6 +20,9 @@ chown -R $SUDO_USER:$SUDO_USER *
 chown -R $SUDO_USER:$SUDO_USER .*
 fi
 cd neovim
+git pull
+git fetch --all --tags --prune --force
+git checkout stable
 sudo -u $SUDO_USER make CMAKE_BUILD_TYPE=RelWithDebInfo
 make install
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\

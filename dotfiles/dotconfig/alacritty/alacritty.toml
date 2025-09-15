@@ -14,7 +14,7 @@ import = [
 opacity = 0.6
 
 [font]
-normal = {family = "MesloLGM Nerd Font Mono", style = "Regular"}
+normal = {family = "MesloLGLNerdFont", style = "Regular"}
 size = 14.5
 
 [colors.normal]
