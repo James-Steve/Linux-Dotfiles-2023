@@ -139,5 +139,6 @@ alias weather='curl wttr.in'
 #Usefully fuzzy find 
 # raw command find . -type f | fzf --multi  | sed 's/.*/"&"/g'
 alias fuzzy="find . -type f | fzf --multi  | sed 's/.*/\"&\"/g'"
+alias tmuxs="tmux new-session -t"
 #All
 
