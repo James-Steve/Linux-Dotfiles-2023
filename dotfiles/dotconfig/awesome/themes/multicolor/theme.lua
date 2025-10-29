@@ -14,11 +14,13 @@ local lain = require("lain")
 
 local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
+local volume_font = "Terminus 18"
 
 local theme = {}
 theme.confdir = os.getenv("HOME") .. "/.config/awesome/themes/multicolor"
 theme.wallpaper = theme.confdir .. "/wall.png"
-theme.font = "Terminus 12"
+theme.font = "Terminus 14"
+theme.vfont = "Terminus 12"
 theme.menu_bg_normal = "#000000"
 theme.menu_bg_focus = "#000000"
 theme.bg_normal = "#000000"
@@ -198,7 +200,7 @@ theme.volume = lain.widget.alsa({
 			volume_now.level = volume_now.level .. "M"
 		end
 
-		widget:set_markup(markup.fontfg(theme.font, "#7493d2", volume_now.level .. "% "))
+		widget:set_markup(markup.fontfg(theme.vfont, "#7493d2", volume_now.level .. "% "))
 	end,
 })
 
