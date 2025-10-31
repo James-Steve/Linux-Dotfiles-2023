@@ -343,6 +343,7 @@ function theme.at_screen_connect(s)
 		},
 	})
 
+    --[[
 	-- Create the bottom wibox
 	s.mybottomwibox = awful.wibar({
 		position = "bottom",
@@ -365,6 +366,7 @@ function theme.at_screen_connect(s)
 			s.mylayoutbox,
 		},
 	})
+    --]]
 end
 
 return theme

@@ -313,6 +313,8 @@ client.connect_signal("manage", function(c)
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
+-- Bar above application
+--[[
 client.connect_signal("request::titlebars", function(c)
 	-- buttons for the titlebar
 	local buttons = gears.table.join(
@@ -351,6 +353,7 @@ client.connect_signal("request::titlebars", function(c)
 		layout = wibox.layout.align.horizontal,
 	})
 end)
+--]]
 
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
