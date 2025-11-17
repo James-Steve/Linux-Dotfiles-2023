@@ -92,7 +92,7 @@ treat="$HON/WHPV400-Treatise/"
 
 alias screenpvold='xrandr --output DP-1 --right-of eDP-1 --mode 1920x1080; feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
 alias screenpv='xrandr --output DP-7 --right-of eDP-1 --mode 1920x1080; xrandr --output eDP-1 --off; xrandr --output DP-5 --right-of DP-7 --mode 1920x1080; feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
-alias background='feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
+alias background='feh --no-fehbg --bg-scale $WALLPAPER'
 alias screenfeh='feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/MontStMichealNight.jpg'
 alias screenpvo='xrandr --output DP-7 --off; xrandr --output DP-5 --off; xrandr --output eDP-1 --auto'
 alias screenpvoffold='xrandr --output DP-1 --off'
