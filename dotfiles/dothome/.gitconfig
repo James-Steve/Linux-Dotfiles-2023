@@ -1,6 +1,6 @@
 [user]
 	name = James-Steve
-	email = hamsterofgold@gmail.com
+	email = 66531058+James-Steve@users.noreply.github.com
 [alias]
     lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
@@ -19,7 +19,6 @@
 #git ls-files . --ignored --exclude-standard --others    will list ignored files
 #git ls-files . --exclude-standard --others             will list untracked files
 [core]
-	edtior = nvim
 	editor = nvim
 [safe]
 	directory = /mnt/c/Users/hamst/OneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/Assignments/
@@ -29,3 +28,13 @@
 	directory = /home/jim/Documents/Source/neovim/
 	directory = /home/rob/Documents/Linux-Dotfiles-2023/dotfiles/dotconfig/nvim
 	directory = /home/rob/Documents/Linux-Dotfiles-2023/dotfiles/dotdocuments/Source/Suckless-Software
+[merge]
+  tool = vimdiff
+[mergetool]
+  prompt = true
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+  prompt = true
+[diff]
+  tool = vimdiff

@@ -126,3 +126,4 @@ PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
 export PATH="$PATH:/opt/mssql-tools18/bin"
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+export MANPAGER="nvim +Man!"
