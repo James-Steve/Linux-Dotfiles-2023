@@ -1,15 +1,6 @@
 #!/bin/bash
-<<<<<<< Updated upstream
-feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/BackGroundPopeLeo.png
-DIR=/home/rob/Documents/Source/Suckless-Sofware
-=======
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-ibus-daemon -dr &
 feh --no-fehbg --bg-scale $WALLPAPER
-DIR=/home/jim/Documents/Source/Suckless-Sofware
->>>>>>> Stashed changes
+DIR=/home/rob/Documents/Source/Suckless-Sofware
 picom -b
 #xcompmgr &
 gsettings  set  org.gnome.desktop.peripherals.mouse  accel-profile  flat
