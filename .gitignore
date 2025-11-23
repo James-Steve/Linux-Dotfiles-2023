@@ -8,3 +8,5 @@
 **dotfiles/dotdocuments/Source/Suckless-Software/dwm/*.o
 dotfiles/dotdocuments/Source/Suckless-Software/dwm/drw.o
 **/libre*
+.trees
+.trees/
