@@ -107,24 +107,23 @@ if ! shopt -oq posix; then
   fi
 fi
 eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/atomic.omp.json)"
-####eval "$(oh-my-posh --init --shell bash --config ~/.poshthemes/atomic.omp.json)"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-. "$HOME/.cargo/env"
-#export JAVA_HOME=/opt/jdks/jdk-19.0.1
-#export PATH=$PATH:$JAVA_HOME/bin
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-#export PATH="/usr/local/texlive/2024/bin/x86_64-linux/:$PATH"
 
 PATH="/home/jim/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/jim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/jim/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
-export PATH="$PATH:/opt/mssql-tools18/bin"
+#export PATH="$PATH:/opt/mssql-tools18/bin"
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 export MANPAGER="nvim +Man!"
+
+# pnpm
+export PNPM_HOME="/home/jim/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
