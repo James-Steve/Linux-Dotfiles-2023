@@ -1,5 +1,5 @@
 #!/bin/bash
-feh --no-fehbg --bg-scale $HOME/Pictures/WallPapers/BackGroundPopeLeo.png
+feh --no-fehbg --bg-scale $WALLPAPER
 DIR=/home/rob/Documents/Source/Suckless-Sofware
 picom -b
 #xcompmgr &
