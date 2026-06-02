@@ -4,6 +4,8 @@ export PATH="$PATH:/home/$USER/.cargo/bin"
 export PATH="$PATH:/home/$USER/Documents/Source/Suckless-Software/statusbar"
 export PATH="$PATH:/home/$USER/go/bin"
 export PATH="$PATH:/home/$USER/.npm/bin"
+export JAVA_HOME="/usr/lib/jvm/java-21"
+
 #export MANPATH="$MANPATH:/usr/local/texlive/2024/texmf-dist/doc/man"
 #export INFOPATH="$INFOPATH:/usr/local/texlive/2024/texmf-dist/doc/info"
 #export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
@@ -125,6 +127,6 @@ PERL5LIB="/home/jim/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/jim/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/jim/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/jim/perl5"; export PERL_MM_OPT;
-export PATH="$PATH:/opt/mssql-tools18/bin"
+#export PATH="$PATH:/opt/mssql-tools18/bin"
 LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
 export MANPAGER="nvim +Man!"
