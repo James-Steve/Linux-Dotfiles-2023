@@ -36,11 +36,13 @@ fi
 if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
 #Fedora
 DISTRO=$FD
-HON=$HOME/Documents/Honours
+HON=$HOME/Documents/Honours2026
 export HON
 #Folders
-source /etc/profile.d/mssql.sh
+#source /etc/profile.d/mssql.sh
 alias cu='cd "$UNI"'
+alias cdv='cd "$HON/WDWV401-DataWarehousing/"'
+alias cweim='cd "$HON/WEIM411-EnvironmentInformationSystems/"'
 #alias cwb='cd "$UNI/2024/EB121/"'
 #alias cwr='cd "$UNI/2024/RNCV111/"'
 #alias cwe='cd "$UNI/2024/ECC101/"'
@@ -139,6 +141,7 @@ alias weather='curl wttr.in'
 #Usefully fuzzy find 
 # raw command find . -type f | fzf --multi  | sed 's/.*/"&"/g'
 alias fuzzy="find . -type f | fzf --multi  | sed 's/.*/\"&\"/g'"
-alias tmuxs="tmux new-session -t"
+alias tmuxs="systemd-run --scope --user tmux new-session -t"
+alias tmuxn="systemd-run --scope --user tmux new-session -d -s"
 #All
 
