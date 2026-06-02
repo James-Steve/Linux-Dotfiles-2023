@@ -4,8 +4,8 @@ FD="Fedora"
 AL="All"
 DISTRO=""
 #export UNI="$HOME/Documents/UniOneDrive/"
-export UNI="$HOME/Documents/ThirdYear/"
-export SUCK="$HOME/Documents/Source/Suckless-Software/"
+#export UNI="$HOME/Documents/ThirdYear/"
+#export SUCK="$HOME/Documents/Source/Suckless-Software/"
 export DOTFILES="$HOME/Documents/Linux-Dotfiles-2023/"
 export PERSONAL="$HOME/Documents/PersonalOnedrive/"
 export OPENSOURCE="$HOME/Documents/Source/"
@@ -18,17 +18,17 @@ if [[ ${PRETTY_NAME^^} == *${UB^^}* ]]; then
 #C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023
 DISTRO=$UB
 #Folders
-alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
-alias cworkf='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Physics/"'
-alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
-alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
-alias cper='cd "/mnt/c/Users/hamst/OneDrive/"'
-alias cbooks='cd "/mnt/c/Users/hamst/OneDrive/Documents and Books/Books/"'
-alias wbooks='explorer.exe "C:\Users\hamst\OneDrive\Documents and Books\Books"'
+#alias cwork='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/"'
+#alias cworkf='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Physics/"'
+#alias work='explorer.exe "C:\Users\hamst\OneDrive - Nelson Mandela University\Uni\Third year 2023"'
+#alias cworkp='cd "/mnt/c/Users/hamst/oneDrive - Nelson Mandela University/Uni/Third year 2023/Programming/WRPV301/"'
+#alias cper='cd "/mnt/c/Users/hamst/OneDrive/"'
+#alias cbooks='cd "/mnt/c/Users/hamst/OneDrive/Documents and Books/Books/"'
+#alias wbooks='explorer.exe "C:\Users\hamst\OneDrive\Documents and Books\Books"'
 #alias workr='explorer.exe "C:\Users\hamst\Documents\Rapid Report"'
 #alias cworkr='cd "/mnt/c/Users/hamst/Documents/Rapid Report/"'
-alias workr='explorer.exe "C:\Users\hamst\Documents\Projects to big for onedrive\CS"'
-alias cworkr='cd "/mnt/c/Users/hamst/Documents/Projects to big for onedrive/CS/"'
+#alias workr='explorer.exe "C:\Users\hamst\Documents\Projects to big for onedrive\CS"'
+#alias cworkr='cd "/mnt/c/Users/hamst/Documents/Projects to big for onedrive/CS/"'
 #Folders
 #Ubuntu
 fi
@@ -36,10 +36,10 @@ fi
 if [[ ${PRETTY_NAME^^} == *${FD^^}* ]]; then
 #Fedora
 DISTRO=$FD
-HON=$HOME/Documents/Honours
+HON=$HOME/Documents/Honours2026/
 export HON
 #Folders
-source /etc/profile.d/mssql.sh
+#source /etc/profile.d/mssql.sh
 alias cu='cd "$UNI"'
 #alias cwb='cd "$UNI/2024/EB121/"'
 #alias cwr='cd "$UNI/2024/RNCV111/"'
@@ -58,12 +58,12 @@ alias cu='cd "$UNI"'
 #alias cuxr='cd "$UNI/Physics/FVV302a/Xray/"'
 #alias cucr='cd "$UNI/Physics/FVV302a/Crystall/"'
 #alias culv='cd "$UNI/WRLV302"'
-alias cld='cd "$DOTFILES"'
-alias clds='cd "$DOTFILES/DistroSpecific/Fedora/"'
-alias cldd='cd "$DOTFILES/dotfiles"'
-alias clddh='cd "$DOTFILES/dotfiles/dothome"'
-alias clddc='cd "$DOTFILES/dotfiles/dotconfig"'
-alias clddd='cd "$DOTFILES/dotfiles/dotdocuments"'
+#alias cld='cd "$DOTFILES"'
+#alias clds='cd "$DOTFILES/DistroSpecific/Fedora/"'
+#alias cldd='cd "$DOTFILES/dotfiles"'
+#alias clddh='cd "$DOTFILES/dotfiles/dothome"'
+#alias clddc='cd "$DOTFILES/dotfiles/dotconfig"'
+#alias clddd='cd "$DOTFILES/dotfiles/dotdocuments"'
 
 alias cs='cd "$SUCK"'
 alias copen='cd "$OPENSOURCE"'
